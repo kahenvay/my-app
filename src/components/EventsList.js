@@ -25,7 +25,7 @@ class EventsList extends Component {
                     <li key={id}>
                         
                         <a href={"/event/" + id }></a>
-                        <p><strong>{title}</strong> hosted by {hosted_by} the {date}</p>
+                        <p><span>{title}</span> hosted by {hosted_by} the {date}</p>
                         <div>
                         <img src={image} alt={title} />
                         </div>

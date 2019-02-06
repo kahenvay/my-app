@@ -16,6 +16,11 @@
     transition: filter 0.2s ease-in-out;
 }
 
+.events__list li span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 .events__list li > p{
     min-height: 42px;
 }

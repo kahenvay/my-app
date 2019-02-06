@@ -11,14 +11,12 @@ class HomePage extends Component {
 
   getEvents() {
     api.getEvents().then((response) => {
-      //console.log('getEvents res', response);
       this.setState({
         events: response,
         isLoading: false
       });
     }).catch(errors => {
       this.setState({ errors, isLoading: false },()=>{
-        console.log('error: ', errors);
       })
     });
   }

@@ -13,7 +13,6 @@ class SingleEventPage extends Component {
 
   getEvent(id) {
     api.getEventsSingle(id).then((response) => {
-      //console.log('getEventsSingle res', response);
       this.setState({
         event: response,
         isLoading: false
@@ -39,7 +38,7 @@ class SingleEventPage extends Component {
     if (errors){
       message = 'There has been an unexpected error, please try again or contact john@smith.com'
     }
-    return (
+    return ( 
       <div>
         <h1>{title}</h1>
         <div>
