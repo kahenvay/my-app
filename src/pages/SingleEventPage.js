@@ -41,39 +41,72 @@ class SingleEventPage extends Component {
     }
     return (
       <div>
-        <h2>SINGLE EVENT</h2>
+        <h1>{title}</h1>
         <div>
           {!isLoading && !errors ? (
                     
                     <div key={id}>
-                        <p><strong>{title}</strong> hosted by {hosted_by} the {date} at {time}</p>
-                        <div className={"aspect-ratio-box"}>
-                            <div className={"aspect-ratio-box-inside "}>
-                                <div className="single_event__image_wrapper">
-                                    <img src={image} alt={title} />
+                        <p>hosted by {hosted_by} the {date} at {time}</p>
+                        <div className="single_event__illustrations_wrapper">
+                            <div className={"aspect-ratio-box"}>
+                                <div className={"aspect-ratio-box-inside "}>
+                                    <div className="single_event__image_wrapper">
+                                        <img src={image} alt={title} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"aspect-ratio-box"}>
+                                <div className={"aspect-ratio-box-inside "}>
+                                    <div className="single_event__map_container"><MapContainer lat={lat} lng={lng} title={title}  /></div>
                                 </div>
                             </div>
                         </div>
-                        <div className={"aspect-ratio-box"}>
-                            <div className={"aspect-ratio-box-inside "}>
-                                <div className="single_event__map_container"><MapContainer lat={lat} lng={lng} title={title}  /></div>
+                        <div className={"single_event__details_wrapper"}>
+                            <div>
+                                <h2>Introduction to the event</h2>
+                            <p>{introduction}</p>
                             </div>
-                        </div>
-                        <div><span>Cost : {expected_costs}</span> |  
-                        <span> Native Language : {native_language}</span> | 
-                        <span> Foreign Language : {foreign_language}</span>
-                        <p>{introduction}</p>
-                        </div>
-                        <div>
-                            <p>description - {description}</p>
-                            <p>duration - {duration}</p>
-                            <p>location - {location}</p>
-                            <p>expected_costs - {expected_costs}</p>
-                            <p>hosted_by - {hosted_by}</p>
-                            <p>native_language - {native_language}</p>
-                            <p>foreign_language - {foreign_language}</p>
-                            <p>lat - {lat}</p>
-                            <p>lng - {lng}</p>
+                            <div>
+                                <h2>
+                                    Details of the event
+                                </h2>
+                                <p>{description}</p>
+                            </div>
+                            <div className={"single_event__short_details_wrapper"}>
+                                <div>
+                                    <p><span>Cost : </span> {expected_costs}</p>
+                                </div>
+                                <div>
+                                    <p><span>Native Languag : </span> {native_language}</p>
+                                </div>
+                                <div>
+                                    <p><span>Foreign Languag : </span> {foreign_language}</p>
+                                </div>
+                                <div>
+                                    <p><span>duration : </span> {duration}</p>
+                                </div>
+                                <div>
+                                    <p><span>location : </span> {location}</p>
+                                </div>
+                                <div>
+                                    <p><span>expected_costs : </span> {expected_costs}</p>
+                                </div>
+                                <div>
+                                    <p><span>hosted_by : </span> {hosted_by}</p>
+                                </div>
+                                <div>
+                                    <p><span>native_language : </span> {native_language}</p>
+                                </div>
+                                <div>
+                                    <p><span>foreign_language : </span> {foreign_language}</p>
+                                </div>
+                                <div>
+                                    <p><span>lat : </span> {lat}</p>
+                                </div>
+                                <div>
+                                    <p><span>lng : </span> {lng}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
           ) : (

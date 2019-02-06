@@ -10,14 +10,14 @@
 .single_event__image_wrapper img{    
     object-fit: cover;
     width: 100%;
+    height: 100%;
 
 }
 
-@media (max-width: 768px) {
 .aspect-ratio-box {
     height: 0;
     overflow: hidden;
-    padding-top: 56.25%;
+    padding-top: calc(100% / (16/9));
     background: white;
     position: relative;
   }
@@ -28,10 +28,39 @@
     width: 100%;
     height: 100%;
   }
-}
+
 
 @media (min-width: 769px) {
+    .single_event__illustrations_wrapper{
+        display:flex;
+    }
     .aspect-ratio-box{
         width: 50%;
+        padding-top: calc(100% / (4/3)/2);
     }
+    /*.aspect-ratio-box-inside {
+        height: 300px;
+    }*/
+
+
+.single_event__details_wrapper{
+    margin-top: 20px;
+}
+
+.single_event__short_details_wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.single_event__short_details_wrapper > div {
+    flex: 0 50%;
+}
+
+
+
+}
+
+.single_event__short_details_wrapper span{
+    font-weight: bold;
 }

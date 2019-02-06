@@ -30,12 +30,6 @@ class EventsList extends Component {
                         <img src={image} alt={title} />
                         </div>
                         
-                        <div><span>Cost : {expected_costs}</span> |  
-                        <span> Native Language : {native_language}</span> | 
-                        <span> Foreign Language : {foreign_language}</span>
-                        <p>{introduction}</p>
-                        </div>
-                        <hr />
                     </li>
                     );
                 })}

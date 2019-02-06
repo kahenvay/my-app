@@ -2,11 +2,34 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .events__list li{
     position: relative;
+    flex: 0 50%;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    filter: grayscale(1);
+    transition: filter 0.2s ease-in-out;
 }
+
+.events__list li > p{
+    min-height: 42px;
+}
+
+.events__list li:hover{
+    filter: grayscale(0);
+}
+
+.events__list img{    
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 
 .events__list a{
     position: absolute;
@@ -17,3 +40,4 @@
     width: 100%;
     height: 100%;
 }
+

@@ -36,8 +36,8 @@ class HomePage extends Component {
 
     return (
       <div>
+        <h1>MIX Movement</h1>
         <h2>Latest events</h2>
-        
         <div>
           { (!isLoading && !errors) ? (
             <EventsList events={events} />
