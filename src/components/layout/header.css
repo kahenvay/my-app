@@ -16,6 +16,7 @@
 }
 .headerButtons a{
     text-decoration: none;
+    color: #222;
 }
 .navButton {
     float: right;
