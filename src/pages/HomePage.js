@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import api from '../api/api';
+import EventsList from '../components/EventsList'
 class HomePage extends Component {
 
   state = {
-    events: {},
+    events: [],
     isLoading: true,
     errors: null
   };
 
   getEvents() {
     api.getEvents().then((response) => {
-      console.log('getEvents res', response);
+      //console.log('getEvents res', response);
+      this.setState({
+        events: response,
+        isLoading: false
+      });
     }).catch(error => {
       this.setState({ error, isLoading: false })
     });
@@ -21,9 +26,17 @@ class HomePage extends Component {
   }
 
   render() {
+    const { isLoading, events } = this.state;
     return (
       <div>
-        Home page
+        <h2>Latest events</h2>
+        <div>
+          {!isLoading ? (
+            <EventsList events={events} />
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
     )
   }
