@@ -27,9 +27,16 @@ class HomePage extends Component {
 
   render() {
     const { isLoading, errors, events } = this.state;
-    let message = 'Loading';
+    let message = <div><p>Loading</p></div>;
     if (errors){
-      message = 'There has been an unexpected error, please try again or contact john@smith.com'
+      message =  
+      <div>
+      <p>There has been an unexpected error, please try again or contact john@smith.com </p>
+      
+      <p>It might help if you sent this along too : </p>
+
+      <strong>{errors.toString()}</strong>
+      </div>;
     }
 
     return (

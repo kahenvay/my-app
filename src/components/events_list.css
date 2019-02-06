@@ -19,10 +19,12 @@
 .events__list li span{
     font-weight: bold;
     text-transform: capitalize;
+    
 }
 
 .events__list li > p{
     min-height: 42px;
+    color: blueviolet;
 }
 
 .events__list li:hover{

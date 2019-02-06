@@ -34,10 +34,17 @@ class SingleEventPage extends Component {
   render() {
     const { isLoading, errors } = this.state;
     const { id, title, introduction, description, duration, date, time, datetime, location, expected_costs, hosted_by, native_language, foreign_language, image, lat, lng} = this.state.event;
-    let message = 'Loading';
+    let message = <div><p>Loading</p></div>;
     if (errors){
-      message = 'There has been an unexpected error, please try again or contact john@smith.com'
-    }
+        message =  
+        <div>
+        <p>There has been an unexpected error, please try again or contact john@smith.com </p>
+        
+        <p>It might help if you sent this along too : </p>
+  
+        <strong>{errors.toString()}</strong>
+        </div>;
+      }
     return ( 
       <div>
         <h1>{title}</h1>
