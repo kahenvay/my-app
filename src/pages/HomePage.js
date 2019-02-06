@@ -16,8 +16,10 @@ class HomePage extends Component {
         events: response,
         isLoading: false
       });
-    }).catch(error => {
-      this.setState({ error, isLoading: false })
+    }).catch(errors => {
+      this.setState({ errors, isLoading: false },()=>{
+        console.log('error: ', errors);
+      })
     });
   }
 
@@ -26,15 +28,21 @@ class HomePage extends Component {
   }
 
   render() {
-    const { isLoading, events } = this.state;
+    const { isLoading, errors, events } = this.state;
+    let message = 'Loading';
+    if (errors){
+      message = 'There has been an unexpected error, please try again or contact john@smith.com'
+    }
+
     return (
       <div>
         <h2>Latest events</h2>
+        
         <div>
-          {!isLoading ? (
+          { (!isLoading && !errors) ? (
             <EventsList events={events} />
           ) : (
-            <p>Loading...</p>
+            <p>{message}</p>
           )}
         </div>
       </div>

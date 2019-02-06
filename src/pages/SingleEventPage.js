@@ -18,8 +18,8 @@ class SingleEventPage extends Component {
         event: response,
         isLoading: false
       });
-    }).catch(error => {
-      this.setState({ error, isLoading: false })
+    }).catch(errors => {
+      this.setState({ errors, isLoading: false })
     });
   }
 
@@ -33,13 +33,17 @@ class SingleEventPage extends Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, errors } = this.state;
     const { id, title, introduction, description, duration, date, time, datetime, location, expected_costs, hosted_by, native_language, foreign_language, image, lat, lng} = this.state.event;
+    let message = 'Loading';
+    if (errors){
+      message = 'There has been an unexpected error, please try again or contact john@smith.com'
+    }
     return (
       <div>
         <h2>SINGLE EVENT</h2>
         <div>
-          {!isLoading ? (
+          {!isLoading && !errors ? (
                     
                     <div key={id}>
                         <p><strong>{title}</strong> hosted by {hosted_by} the {date} at {time}</p>
@@ -73,7 +77,7 @@ class SingleEventPage extends Component {
                         </div>
                     </div>
           ) : (
-            <p>Loading ...</p>
+            <p>{message}</p>
           )}
         </div>
       </div>
