@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../api/api';
-import EventsList from '../components/EventsList'
+import EventsList from '../components/EventsList/EventsList'
 class HomePage extends Component {
 
   state = {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import api from '../api/api';
-import MapContainer from '../components/MapContainer';
+import api from '../../api/api';
+import MapContainer from '../../components/MapContainer';
 import './single_event.css';
 class SingleEventPage extends Component {
 

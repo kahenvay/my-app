@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { browserHistory } from 'react-router';
-import PageHeader from './components/layout/PageHeader';
-import PageFooter from './components/layout/PageFooter';
+import PageHeader from './components/layout/header/PageHeader'; 
+import PageFooter from './components/layout/footer/PageFooter'; 
 import HomePage from './pages/HomePage';
-import SingleEventPage from './pages/SingleEventPage';
+import SingleEventPage from './pages/SingleEvent/SingleEventPage';
 import logo from './logo.svg';
 import './App.css';
 
@@ -24,7 +24,7 @@ class App extends Component {
           <PageFooter />
         </div>
       </Router>
-    );
+    ); 
   }
 }
 

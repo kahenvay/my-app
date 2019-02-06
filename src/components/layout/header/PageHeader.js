@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './header.css';
-import NavBar from './NavBar';
+import NavBar from '../NavBar';
 
 class PageHeader extends Component {
   render() {
