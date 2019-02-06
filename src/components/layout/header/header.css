@@ -1,3 +1,5 @@
+
+
 .header__banner{
     height: 80px;
     width: 100%;
@@ -12,7 +14,7 @@
     text-transform: uppercase;
 }
 .headerButtons li{
-    padding: 20px;
+    padding: 20px 20px 25px;
 }
 .headerButtons a{
     text-decoration: none;
@@ -20,4 +22,14 @@
 }
 .navButton {
     float: right;
+}
+
+.header__top{
+    padding-top: 5px;
+}
+
+.logo{
+    width: 64px;
+    float: left;
+    margin-left: 15px;
 }
