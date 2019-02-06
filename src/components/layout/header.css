@@ -1,0 +1,22 @@
+.header__banner{
+    height: 80px;
+    width: 100%;
+}
+
+.headerButtons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+}
+.headerButtons li{
+    padding: 20px;
+}
+.headerButtons a{
+    text-decoration: none;
+}
+.navButton {
+    float: right;
+}
