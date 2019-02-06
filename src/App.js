@@ -19,7 +19,7 @@ class App extends Component {
           <PageHeader />
           <main>
             <Route name="home" exact path="/" component={HomePage} />
-            <Route name="single event" path='event/:id' component={SingleEventPage} />
+            <Route name="single event" exact path='/event/:id' component={SingleEventPage} />
           </main>
           <PageFooter />
         </div>
