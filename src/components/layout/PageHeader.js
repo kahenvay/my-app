@@ -7,7 +7,7 @@ class PageHeader extends Component {
     return (
       <header>
         <NavBar/>
-        <img class="header__banner" src="http://ucf.org.au/wp-content/uploads/ucf-gradient-banner.jpg" alt="Gradient banner from ucf.org.au"/>
+        <img className="header__banner" src="http://ucf.org.au/wp-content/uploads/ucf-gradient-banner.jpg" alt="Gradient banner from ucf.org.au"/>
       </header>
     )
   }
