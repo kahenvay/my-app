@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './detailLine.css';
 
-const DetailLine = ({title,value}) =>{
+const DetailLine = ({title,description}) =>{
 
     return(
         <div className="detailLine">
-            <p><span>{title} : </span> {value}</p>
+            <p><span>{title} : </span> {description}</p>
         </div>
     )
 }

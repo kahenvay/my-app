@@ -5,6 +5,7 @@ import './singleEvent.css';
 import EventImage from './../../components/EventImage/EventImage';
 import Message from '../../components/Message/Message';
 import DetailLine from './../../components/DetailLine/DetailLine';
+import GroupeTitleDescription from './../../components/GroupeTitleDescription/GroupeTitleDescription';
 class SingleEventPage extends Component {
 
   state = {
@@ -58,26 +59,18 @@ class SingleEventPage extends Component {
                             </div>
                         </div>
                         <div className={"single_event__details_wrapper"}>
-                            <div>
-                                <h2>Introduction to the event</h2>
-                            <p>{introduction}</p>
-                            </div>
-                            <div>
-                                <h2>
-                                    Details of the event
-                                </h2>
-                                <p>{description}</p>
-                            </div>
+                            <GroupeTitleDescription title={"Introduction to the event"} description={introduction}/>
+                            <GroupeTitleDescription title={"Details of the event"} description={description}/>
                             <div className={"single_event__short_details_wrapper"}>
-                                <DetailLine title={"Cost"} value={expected_costs}/>
-                                <DetailLine title={"duration"} value={duration}/>
-                                <DetailLine title={"location"} value={location}/>
-                                <DetailLine title={"expected_costs"} value={expected_costs}/>
-                                <DetailLine title={"hosted_by"} value={hosted_by}/>
-                                <DetailLine title={"native_language"} value={native_language}/>
-                                <DetailLine title={"foreign_language"} value={foreign_language}/>
-                                <DetailLine title={"lat"} value={lat}/>
-                                <DetailLine title={"lng"} value={lng}/>
+                                <DetailLine title={"Cost"} description={expected_costs}/>
+                                <DetailLine title={"duration"} description={duration}/>
+                                <DetailLine title={"location"} description={location}/>
+                                <DetailLine title={"expected_costs"} description={expected_costs}/>
+                                <DetailLine title={"hosted_by"} description={hosted_by}/>
+                                <DetailLine title={"native_language"} description={native_language}/>
+                                <DetailLine title={"foreign_language"} description={foreign_language}/>
+                                <DetailLine title={"lat"} description={lat}/>
+                                <DetailLine title={"lng"} description={lng}/>
                             </div>
                         </div>
                     </div>
