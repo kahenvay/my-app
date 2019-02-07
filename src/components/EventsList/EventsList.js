@@ -18,8 +18,8 @@ class EventsList extends Component {
 
 //why is this not triggering errors
 EventsList.propTypes = {
-    events : PropTypes.string,
-    event : PropTypes.string
+    events : PropTypes.array,
+    event : PropTypes.object
 };
 
 export default EventsList;

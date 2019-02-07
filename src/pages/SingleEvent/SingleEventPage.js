@@ -3,6 +3,7 @@ import api from '../../api/api';
 import MapContainer from '../../components/MapContainer';
 import './single_event.css';
 import EventImage from './../../components/EventImage/EventImage';
+import Message from '../../components/Message/Message';
 class SingleEventPage extends Component {
 
   state = {
@@ -34,18 +35,7 @@ class SingleEventPage extends Component {
 
   render() {
     const { isLoading, errors } = this.state;
-    const { id, title, introduction, description, duration, date, time, datetime, location, expected_costs, hosted_by, native_language, foreign_language, image, lat, lng} = this.state.event;
-    let message = <div><p>Loading</p></div>;
-    if (errors){
-        message =  
-        <div>
-        <p>There has been an unexpected error, please try again or contact john@smith.com </p>
-        
-        <p>It might help if you sent this along too : </p>
-  
-        <strong>{errors.toString()}</strong>
-        </div>;
-      }
+    const { id, title, introduction, description, duration, date, time, location, expected_costs, hosted_by, native_language, foreign_language, image, lat, lng} = this.state.event;
     return ( 
       <div>
         <h1>{title}</h1>
@@ -115,7 +105,7 @@ class SingleEventPage extends Component {
                         </div>
                     </div>
           ) : (
-            <p>{message}</p>
+            <Message errors={errors}/>
           )}
         </div>
       </div>

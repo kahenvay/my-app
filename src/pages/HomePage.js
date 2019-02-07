@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../api/api';
 import EventsList from '../components/EventsList/EventsList';
+import Message from '../components/Message/Message';
 class HomePage extends Component {
 
   state = {
@@ -27,17 +28,6 @@ class HomePage extends Component {
 
   render() {
     const { isLoading, errors, events } = this.state;
-    let message = <div><p>Loading</p></div>;
-    if (errors){
-      message =  
-      <div>
-      <p>There has been an unexpected error, please try again or contact john@smith.com </p>
-      
-      <p>It might help if you sent this along too : </p>
-
-      <strong>{errors.toString()}</strong>
-      </div>;
-    }
 
     return (
       <div>
@@ -47,7 +37,7 @@ class HomePage extends Component {
           { (!isLoading && !errors) ? (
             <EventsList events={events} />
           ) : (
-            <p>{message}</p>
+            <Message errors={errors}/>
           )}
         </div>
       </div>

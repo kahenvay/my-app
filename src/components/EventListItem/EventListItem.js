@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './eventListItem.css';
 import EventImage from './../EventImage/EventImage';
@@ -20,8 +20,7 @@ const EventListItem = ({event}) =>{
 
 //why is this not triggering errors
 EventListItem.propTypes = {
-    event : PropTypes.string,
-    title: PropTypes.bool
+    event : PropTypes.object
 };
 
 export default EventListItem;
