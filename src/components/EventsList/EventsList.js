@@ -9,7 +9,7 @@ class EventsList extends Component {
         return (
             <ul className="events__list">
                 {this.props.events.map(event => {
-                    return <EventListItem event={event} />
+                    return <EventListItem key={event.id} event={event} />
                 })}
             </ul>
         )

@@ -8,7 +8,7 @@ const EventListItem = ({event}) =>{
     const { id, title, date, hosted_by, image} = event;
 
     return(
-        <li key={id}>
+        <li>
             <a href={"/event/" + id }></a>
             <p><span>{title}</span> hosted by {hosted_by} the {date}</p>
             <div>
