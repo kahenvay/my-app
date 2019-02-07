@@ -7,6 +7,9 @@ import Message from '../../components/Message/Message';
 import DetailLine from './../../components/DetailLine/DetailLine';
 import GroupeTitleDescription from './../../components/GroupeTitleDescription/GroupeTitleDescription';
 import AspectRatioBox from './../../components/AspectRatioBox/AspectRatioBox';
+import IllustrationWrapper from './../../components/wrappers/IllustrationWrapper';
+import DetailsWrapper from './../../components/wrappers/DetailsWrapper';
+import MoreDetailsWrapper from '../../components/wrappers/MoreDetailsWrapper';
 class SingleEventPage extends Component {
 
   state = {
@@ -44,21 +47,20 @@ class SingleEventPage extends Component {
         <h1>{title}</h1>
         <div>
           {!isLoading && !errors ? (
-                    
-                    <div key={{id}}>
+                    <div className="singleEvent" key={{id}}>
                         <p>hosted by {hosted_by} the {date} at {time}</p>
-                        <div className="single_event__illustrations_wrapper">
+                        <IllustrationWrapper>
                             <AspectRatioBox>
                               <EventImage image={image} title={title}/>
                             </AspectRatioBox>
                             <AspectRatioBox>
-                              <div className="single_event__map_container"><MapContainer lat={lat} lng={lng} title={title}  /></div>
+                              <MapContainer lat={lat} lng={lng} title={title}  />
                             </AspectRatioBox>
-                        </div>
-                        <div className={"single_event__details_wrapper"}>
+                        </IllustrationWrapper>
+                        <DetailsWrapper>
                             <GroupeTitleDescription title={"Introduction to the event"} description={introduction}/>
                             <GroupeTitleDescription title={"Details of the event"} description={description}/>
-                            <div className={"single_event__short_details_wrapper"}>
+                            <MoreDetailsWrapper>
                                 <DetailLine title={"Cost"} description={expected_costs}/>
                                 <DetailLine title={"duration"} description={duration}/>
                                 <DetailLine title={"location"} description={location}/>
@@ -68,8 +70,8 @@ class SingleEventPage extends Component {
                                 <DetailLine title={"foreign_language"} description={foreign_language}/>
                                 <DetailLine title={"lat"} description={lat}/>
                                 <DetailLine title={"lng"} description={lng}/>
-                            </div>
-                        </div>
+                              </MoreDetailsWrapper>
+                          </DetailsWrapper>
                     </div>
           ) : (
             <Message errors={errors}/>

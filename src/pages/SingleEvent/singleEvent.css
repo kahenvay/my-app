@@ -1,15 +1,11 @@
-.single_event__map_container, .event__image{
+.event__image{
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-
-
-
-
 @media (min-width: 769px) {
-    .single_event__illustrations_wrapper{
+    .singleEvent .illustrationsWrapper{
         display:flex;
     }
     .aspect-ratio-box{
@@ -18,17 +14,17 @@
     }
 
 
-.single_event__details_wrapper{
+.singleEvent .detailsWrapper{
     margin-top: 20px;
 }
 
-.single_event__short_details_wrapper{
+.singleEvent .moreDetailsWrapper{
     display:flex;
     flex-wrap: wrap;
     
 }
 
-.single_event__short_details_wrapper > div {
+.singleEvent .moreDetailsWrapper > div {
     flex: 0 50%;
 }
 
