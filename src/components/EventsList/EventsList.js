@@ -16,7 +16,6 @@ class EventsList extends Component {
     }
 }
 
-//why is this not triggering errors
 EventsList.propTypes = {
     events : PropTypes.array,
     event : PropTypes.object

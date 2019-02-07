@@ -18,7 +18,6 @@ const EventListItem = ({event}) =>{
     )
 }
 
-//why is this not triggering errors
 EventListItem.propTypes = {
     event : PropTypes.object
 };

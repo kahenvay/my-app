@@ -12,7 +12,6 @@ const GroupeTitleDescription = ({title,description}) =>{
     )
 }
 
-//why is this not triggering errors
 GroupeTitleDescription.propTypes = {
     image : PropTypes.string,
     title: PropTypes.string

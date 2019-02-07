@@ -11,7 +11,6 @@ const DetailLine = ({title,description}) =>{
     )
 }
 
-//why is this not triggering errors
 DetailLine.propTypes = {
     image : PropTypes.string,
     title: PropTypes.string

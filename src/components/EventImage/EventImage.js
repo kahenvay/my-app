@@ -11,7 +11,6 @@ const EventImage = ({image, title}) =>{
     )
 }
 
-//why is this not triggering errors
 EventImage.propTypes = {
     image : PropTypes.string,
     title: PropTypes.string

@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the homepage and the events 1`] = `
+<App
+  errors={null}
+  isLoading={true}
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div>
+        <PageHeader>
+          <header>
+            <div
+              className="header__top"
+            >
+              <div
+                className="logo_container"
+              >
+                <img
+                  alt="Gradient banner"
+                  className="logo"
+                  src="https://z-m-scontent.flis5-1.fna.fbcdn.net/v/t1.0-9/50481853_2500649853342915_5506782981307498496_n.jpg?_nc_cat=108&_nc_ad=z-m&_nc_cid=1272&_nc_zor=9&_nc_ht=z-m-scontent.flis5-1.fna&oh=7c00ad8687755a389dcec549346b4de1&oe=5CFAB789"
+                />
+              </div>
+              <NavBar>
+                <ul
+                  className="headerButtons"
+                >
+                  <li
+                    className="navButton"
+                  >
+                    <Link
+                      replace={false}
+                      to=""
+                    >
+                      <a
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        Home
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+              </NavBar>
+            </div>
+            <img
+              alt="Gradient banner from ucf.org.au"
+              className="header__banner"
+              src="http://ucf.org.au/wp-content/uploads/ucf-gradient-banner.jpg"
+            />
+          </header>
+        </PageHeader>
+        <main>
+          <Route
+            component={[Function]}
+            exact={true}
+            name="home"
+            path="/"
+          >
+            <HomePage
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+            >
+              <div>
+                <h1>
+                  MIX Movement
+                </h1>
+                <h2>
+                  Latest events
+                </h2>
+                <div>
+                  <Message
+                    errors={null}
+                  >
+                    <div>
+                      <p>
+                        Loading
+                      </p>
+                    </div>
+                  </Message>
+                </div>
+              </div>
+            </HomePage>
+          </Route>
+          <Route
+            component={[Function]}
+            exact={true}
+            name="single event"
+            path="/event/:id"
+          />
+        </main>
+        <Footer>
+          <footer>
+            <div>
+              <p>
+                Footer component
+              </p>
+            </div>
+          </footer>
+        </Footer>
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;

@@ -6,6 +6,7 @@ import EventImage from './../../components/EventImage/EventImage';
 import Message from '../../components/Message/Message';
 import DetailLine from './../../components/DetailLine/DetailLine';
 import GroupeTitleDescription from './../../components/GroupeTitleDescription/GroupeTitleDescription';
+import AspectRatioBox from './../../components/AspectRatioBox/AspectRatioBox';
 class SingleEventPage extends Component {
 
   state = {
@@ -47,16 +48,12 @@ class SingleEventPage extends Component {
                     <div key={{id}}>
                         <p>hosted by {hosted_by} the {date} at {time}</p>
                         <div className="single_event__illustrations_wrapper">
-                            <div className={"aspect-ratio-box"}>
-                                <div className={"aspect-ratio-box-inside "}>
-                                    <EventImage image={image} title={title}/>
-                                </div>
-                            </div>
-                            <div className={"aspect-ratio-box"}>
-                                <div className={"aspect-ratio-box-inside "}>
-                                    <div className="single_event__map_container"><MapContainer lat={lat} lng={lng} title={title}  /></div>
-                                </div>
-                            </div>
+                            <AspectRatioBox>
+                              <EventImage image={image} title={title}/>
+                            </AspectRatioBox>
+                            <AspectRatioBox>
+                              <div className="single_event__map_container"><MapContainer lat={lat} lng={lng} title={title}  /></div>
+                            </AspectRatioBox>
                         </div>
                         <div className={"single_event__details_wrapper"}>
                             <GroupeTitleDescription title={"Introduction to the event"} description={introduction}/>
