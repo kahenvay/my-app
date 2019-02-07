@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../../api/api';
 import MapContainer from '../../components/MapContainer';
 import './single_event.css';
+import EventImage from './../../components/EventImage/EventImage';
 class SingleEventPage extends Component {
 
   state = {
@@ -56,9 +57,7 @@ class SingleEventPage extends Component {
                         <div className="single_event__illustrations_wrapper">
                             <div className={"aspect-ratio-box"}>
                                 <div className={"aspect-ratio-box-inside "}>
-                                    <div className="single_event__image_wrapper">
-                                        <img src={image} alt={title} />
-                                    </div>
+                                    <EventImage image={image} title={title}/>
                                 </div>
                             </div>
                             <div className={"aspect-ratio-box"}>

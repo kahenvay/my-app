@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import EventListItem from '../EventListItem/EventListItem';
 import './eventsList.css';
 
@@ -15,4 +15,11 @@ class EventsList extends Component {
         )
     }
 }
+
+//why is this not triggering errors
+EventsList.propTypes = {
+    events : PropTypes.string,
+    event : PropTypes.string
+};
+
 export default EventsList;
