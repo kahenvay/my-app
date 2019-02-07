@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import api from '../../api/api';
 import MapContainer from '../../components/MapContainer';
-import './single_event.css';
+import './singleEvent.css';
 import EventImage from './../../components/EventImage/EventImage';
 import Message from '../../components/Message/Message';
+import DetailLine from './../../components/DetailLine/DetailLine';
 class SingleEventPage extends Component {
 
   state = {
@@ -42,7 +43,7 @@ class SingleEventPage extends Component {
         <div>
           {!isLoading && !errors ? (
                     
-                    <div key={id}>
+                    <div key={{id}}>
                         <p>hosted by {hosted_by} the {date} at {time}</p>
                         <div className="single_event__illustrations_wrapper">
                             <div className={"aspect-ratio-box"}>
@@ -68,39 +69,15 @@ class SingleEventPage extends Component {
                                 <p>{description}</p>
                             </div>
                             <div className={"single_event__short_details_wrapper"}>
-                                <div>
-                                    <p><span>Cost : </span> {expected_costs}</p>
-                                </div>
-                                <div>
-                                    <p><span>Native Languag : </span> {native_language}</p>
-                                </div>
-                                <div>
-                                    <p><span>Foreign Languag : </span> {foreign_language}</p>
-                                </div>
-                                <div>
-                                    <p><span>duration : </span> {duration}</p>
-                                </div>
-                                <div>
-                                    <p><span>location : </span> {location}</p>
-                                </div>
-                                <div>
-                                    <p><span>expected_costs : </span> {expected_costs}</p>
-                                </div>
-                                <div>
-                                    <p><span>hosted_by : </span> {hosted_by}</p>
-                                </div>
-                                <div>
-                                    <p><span>native_language : </span> {native_language}</p>
-                                </div>
-                                <div>
-                                    <p><span>foreign_language : </span> {foreign_language}</p>
-                                </div>
-                                <div>
-                                    <p><span>lat : </span> {lat}</p>
-                                </div>
-                                <div>
-                                    <p><span>lng : </span> {lng}</p>
-                                </div>
+                                <DetailLine title={"Cost"} value={expected_costs}/>
+                                <DetailLine title={"duration"} value={duration}/>
+                                <DetailLine title={"location"} value={location}/>
+                                <DetailLine title={"expected_costs"} value={expected_costs}/>
+                                <DetailLine title={"hosted_by"} value={hosted_by}/>
+                                <DetailLine title={"native_language"} value={native_language}/>
+                                <DetailLine title={"foreign_language"} value={foreign_language}/>
+                                <DetailLine title={"lat"} value={lat}/>
+                                <DetailLine title={"lng"} value={lng}/>
                             </div>
                         </div>
                     </div>
